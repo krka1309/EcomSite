@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+}
+.mainDiv {
+  display: flex;
+}
+.childDiv {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 220px;
+}
+.TotalPrice {
+  font-weight: 800;
+}
+.cartImage {
+  width: 70px;
+  margin-left: 82px;
+}
+.priceTag {
+  max-width: calc(100% - 4ch);
+  margin-left: 80px;
+  padding: 12px;
+}
+.removeBtn {
+  background-color: #ff6347;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 0px #d43f3a;
+  text-shadow: 1px 1px 0px #a83131;
+  transition: all 0.2s ease-in-out;
+  padding: 5px 17px;
+}
+
+.removeBtn:hover {
+  background-color: #d43f3a;
+  box-shadow: 0px 5px 0px #a83131;
+}
+
+.removeBtn {
+  margin-left: 84px;
+  margin-bottom: 12px;
+}
+.subtotal {
+  padding: 12px;
+  font-weight: 800;
+}

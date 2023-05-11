@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  background-color: black;
+  height: 50px;
+  align-items: end;
+  justify-content: end;
+}
+.links {
+  display: flex;
+  align-items: end;
+  margin-right: 20px;
+  color: white;
+  text-align: center;
+}
+.linktext1 {
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 0px 0px 20px 0px;
+}
+.linktext {
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 12px 12px 6px;
+  margin-left: 12px;
+}
