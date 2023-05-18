@@ -3,6 +3,7 @@ import {
   GET_PRODUCT_LIST,
   REMOVE_FROM_CART,
   SET_CART_ITEMS,
+  SET_SEARCH_QUERY,
 } from "../../constants/actionTypes";
 
 export function getProduct(data) {
@@ -36,3 +37,8 @@ export function setCartItemsAction(cartItems) {
     payload: cartItems,
   };
 }
+
+export const setSearchQuery = (query) => ({
+  type: SET_SEARCH_QUERY,
+  payload: query,
+});

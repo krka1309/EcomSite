@@ -10,14 +10,20 @@ const Cart = () => {
   function handleRemove(item) {
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
   }
-
   let subtotal = 0;
   return (
     <div className="mainDiv">
-      <div>
+      <p className="TotalPrice">
+        <b>Total Price</b>
+      </p>
+      {stateItem.map((cartProduct) => {
+        subtotal += cartProduct.price;
+      })}
+      <span className="subtotal">${subtotal}</span>
+      <div className="productDiv">
         {stateItem.map((product, index) => {
           return (
-            <div>
+            <div className="product">
               <img
                 src={product.image}
                 alt=""
@@ -37,15 +43,7 @@ const Cart = () => {
           );
         })}
       </div>
-      <div className="childDiv">
-        <p className="TotalPrice">
-          <b>Total Price</b>
-        </p>
-        {stateItem.map((cartProduct) => {
-          subtotal += cartProduct.price;
-        })}
-        <span className="subtotal">${subtotal}</span>
-      </div>
+      <div className="childDiv"></div>
     </div>
   );
 };

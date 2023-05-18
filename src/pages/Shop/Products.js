@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { cartItems } from "../../redux/actions/idActions";
 const Products = (props) => {
   const addToCart = (data) => {
-    // props.getProduct(index);
     props.cartItems(data);
     console.log(data);
   };
@@ -12,12 +11,15 @@ const Products = (props) => {
   return (
     <div className="product">
       <img src={image} className="image" alt="" />
+
       <div className="description">
         <p>
           <b>{title}</b>
         </p>
         <p>
-          <b>${price}</b>
+          <span>
+            <b>${price}</b>
+          </span>
         </p>
         <button onClick={() => addToCart(props.data)} className="addbutton">
           Add To Cart
@@ -26,13 +28,13 @@ const Products = (props) => {
     </div>
   );
 };
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
   return ({ id }) => ({ id });
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    // getProduct: (data) => dispatch(getProduct(data)),
     cartItems: (item) => dispatch(cartItems(item)),
   };
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(Products);
