@@ -19,6 +19,7 @@ const Login = () => {
       alert("Invalid Credentials");
     }
   };
+
   console.log(error);
   return (
     <form className="LoginComp">
@@ -37,6 +38,7 @@ const Login = () => {
       <button type="submit" onClick={handleLogin}>
         Login
       </button>
+      <p className="forgotPassword">fogot password?</p>
     </form>
   );
 };

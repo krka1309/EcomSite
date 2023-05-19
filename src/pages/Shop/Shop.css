@@ -59,7 +59,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   place-items: start;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .productsname {
     grid-template-columns: 1fr;
   }

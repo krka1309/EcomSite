@@ -5,6 +5,13 @@
   align-items: center;
   height: 70vh;
 }
+.forgotPassword {
+  margin: 12px;
+  font-size: 13px;
+  font-style: italic;
+  cursor: pointer;
+  color: red;
+}
 input {
   width: 200px;
   padding: 10px;

@@ -11,9 +11,10 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Shop />} />
         {isLoggedIn ? (
           <>
+            <Route path="/Login" element={<Login />} />
             <Route path="/Shop" element={<Shop />} />
             <Route path="/Cart" element={<Cart />} />
           </>

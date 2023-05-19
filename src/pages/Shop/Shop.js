@@ -5,7 +5,7 @@ import "../../components/Navbar.css";
 import { useSelector } from "react-redux";
 const Shop = () => {
   const [products, setProducts] = useState([]);
-
+  const [error, setError] = useState("");
   const query = useSelector((state) => state.allProducts.searchQuery);
   const fetchProducts = () => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
@@ -17,7 +17,7 @@ const Shop = () => {
   }, []);
 
   const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(query.toLowerCase())
+    product.title.toLowerCase().includes(query?.toLowerCase())
   );
 
   return (

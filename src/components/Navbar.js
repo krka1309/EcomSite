@@ -35,6 +35,9 @@ const Navbar = memo(() => {
         <MagnifyingGlass size={32} className="SearchIcon" />
       </div>
       <div className="links">
+        <Link to="/Login" className="linktext2">
+          Login
+        </Link>
         <Link to="/Shop" className="linktext1">
           Shop
         </Link>
