@@ -14,6 +14,8 @@ const Login = () => {
       localStorage.setItem("isLoggedIn", "true");
       navigate("/Shop");
       window.location.reload();
+    } else if (username === "" && password === "") {
+      alert("Error!,Username or Password field cannot be null");
     } else {
       setError("Invalid email or password");
       alert("Invalid Credentials");

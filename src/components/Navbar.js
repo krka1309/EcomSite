@@ -4,17 +4,19 @@ import { ShoppingCart } from "phosphor-react";
 import { MagnifyingGlass } from "phosphor-react";
 import { setSearchQuery } from "../redux/actions/idActions";
 import "./Navbar.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Navbar = memo(() => {
   const [query, setQuery] = useState("");
 
+  let countCartItems = useSelector((state) => state.allProducts.cart);
   let dispatch = useDispatch();
-  const handleInputChange = (inputValue) => {
-    setQuery(inputValue);
-    dispatch(setSearchQuery(inputValue));
-  };
 
+  const handleInputChange = (inputValue) => {
+    dispatch(setSearchQuery(inputValue));
+    setQuery(inputValue);
+  };
+  console.log(countCartItems.length);
   return (
     <header className="navbar">
       <div className="logo">
@@ -45,6 +47,7 @@ const Navbar = memo(() => {
           <ShoppingCart size={32} />
         </Link>
       </div>
+      <span className="cartItem">{countCartItems.length}</span>
     </header>
   );
 });

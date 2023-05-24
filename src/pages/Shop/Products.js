@@ -1,11 +1,11 @@
 import React from "react";
 import "./Shop.css";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cartItems } from "../../redux/actions/idActions";
 const Products = (props) => {
+  let dispatch = useDispatch();
   const addToCart = (data) => {
-    props.cartItems(data);
-    console.log(data);
+    dispatch(cartItems(data));
   };
   const { title, image, price } = props.data;
   return (
@@ -28,13 +28,5 @@ const Products = (props) => {
     </div>
   );
 };
-const mapStateToProps = () => {
-  return ({ id }) => ({ id });
-};
-const mapDispatchToProps = (dispatch) => {
-  return {
-    cartItems: (item) => dispatch(cartItems(item)),
-  };
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Products);
+export default Products;

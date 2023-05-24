@@ -51,3 +51,18 @@
 .linktext:hover {
   color: #ff9900;
 }
+.linktext1:hover {
+  color: #ff9900;
+}
+.linktext2:hover {
+  color: #ff9900;
+}
+.cartItem {
+  color: white;
+  margin-left: -14px;
+  margin-bottom: 28px;
+  background-color: #ff9900;
+  width: 12px;
+  padding: 0px 0px 0px 4px;
+  border-radius: 10px;
+}

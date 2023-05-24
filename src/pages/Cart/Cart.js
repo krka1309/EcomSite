@@ -23,14 +23,14 @@ const Cart = () => {
       <div className="productDiv">
         {stateItem.map((product, index) => {
           return (
-            <div className="product">
+            <div className="cartproducts">
               <img
                 src={product.image}
                 alt=""
                 key={index}
                 className="cartImage"
               />
-              <p>
+              <p className="productTitle">
                 <b>{product.title}</b>
               </p>
               <p className="priceTag">

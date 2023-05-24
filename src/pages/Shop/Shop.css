@@ -20,6 +20,8 @@
 }
 .image {
   width: 50px;
+  padding: 12px;
+  margin-top: -12px;
 }
 .addbutton {
   background-color: #ff6347;

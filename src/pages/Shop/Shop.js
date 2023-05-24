@@ -1,11 +1,12 @@
-import React, { useEffect, useState, memo } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { setSearchQuery } from "../../redux/actions/idActions";
 import Products from "./Products";
 import "../../components/Navbar.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [error, setError] = useState("");
+  let dispatch = useDispatch();
   const query = useSelector((state) => state.allProducts.searchQuery);
   const fetchProducts = () => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
@@ -14,10 +15,11 @@ const Shop = () => {
   };
   useEffect(() => {
     fetchProducts();
+    dispatch(setSearchQuery(""));
   }, []);
 
   const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(query?.toLowerCase())
+    product.title.toLowerCase().includes(query.toLowerCase())
   );
 
   return (
