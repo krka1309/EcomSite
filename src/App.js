@@ -6,13 +6,15 @@ import Shop from "./pages/Shop/Shop";
 import Login from "./Login/Login";
 import BuyItem from "./pages/BuyPage/BuyItem";
 function App() {
+  // localStorage.setItem("isLoggedIn", true);
+
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Shop />} />
+        <Route path="/" element={<Login />} />
         {isLoggedIn ? (
           <>
             <Route path="/Login" element={<Login />} />
