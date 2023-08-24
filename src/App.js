@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Cart from "./pages/Cart/Cart";
 import Shop from "./pages/Shop/Shop";
 import Login from "./Login/Login";
+import BuyItem from "./pages/BuyPage/BuyItem";
 function App() {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
@@ -17,6 +18,7 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/Shop" element={<Shop />} />
             <Route path="/Cart" element={<Cart />} />
+            <Route path="/BuyItem" element={<BuyItem />} />
           </>
         ) : (
           <Route path="/" element={<Login />} />

@@ -1,6 +1,9 @@
 .Main-class {
   display: grid;
+  /* background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/June23/ATF/UNREC/Shoes/2/3000._CB587551726_.jpg"); */
   grid-template-columns: 1fr 1fr 1fr;
+  /* width: 200px; */
+  /* background-size: 150px; */
   grid-template-rows: 200px 200px 300px;
 }
 .totalPrice {
@@ -61,7 +64,13 @@
   grid-template-columns: 1fr 1fr 1fr;
   place-items: start;
 }
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 1200px) {
+  .productsname {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 820px) {
   .productsname {
     grid-template-columns: 1fr;
   }

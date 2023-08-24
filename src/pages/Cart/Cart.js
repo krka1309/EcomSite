@@ -1,15 +1,24 @@
 import React from "react";
 import "./Cart.css";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { buyItemPricePage } from "../../redux/actions/idActions";
+
 const Cart = () => {
   const stateItem = useSelector((state) => state.allProducts.cart);
 
   console.log(stateItem);
   let dispatch = useDispatch();
-
+  let navigate = useNavigate();
   function handleRemove(item) {
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
   }
+
+  const buyItem = (item) => {
+    navigate("/BuyItem");
+    dispatch(buyItemPricePage(item));
+    console.log(item);
+  };
   let subtotal = 0;
   return (
     <div className="mainDiv">
@@ -23,7 +32,7 @@ const Cart = () => {
       <div className="productDiv">
         {stateItem.map((product, index) => {
           return (
-            <div className="cartproducts">
+            <div key={index} className="cartproducts">
               <img
                 src={product.image}
                 alt=""
@@ -39,11 +48,13 @@ const Cart = () => {
               <button onClick={() => handleRemove(index)} className="removeBtn">
                 Remove
               </button>
+              <button className="removeBtn" onClick={() => buyItem(product)}>
+                Buy
+              </button>
             </div>
           );
         })}
       </div>
-      <div className="childDiv"></div>
     </div>
   );
 };

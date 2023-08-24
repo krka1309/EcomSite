@@ -3,6 +3,7 @@ const initialState = {
   cart: [],
   cartItems: [],
   searchQuery: "",
+  boughtItems: [],
 };
 function addToCartReducer(state = initialState, action) {
   switch (action.type) {
@@ -32,6 +33,11 @@ function addToCartReducer(state = initialState, action) {
       return {
         ...state,
         searchQuery: action.payload,
+      };
+    case "BUY_PRODUCT_PAGE_PRICE":
+      return {
+        ...state,
+        boughtItems: action.payload,
       };
     default:
       return state;

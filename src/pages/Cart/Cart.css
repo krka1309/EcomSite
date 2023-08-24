@@ -3,6 +3,7 @@
 }
 .mainDiv {
   display: flex;
+  flex-direction: row;
 }
 .cartproducts {
   width: 261px;
@@ -17,18 +18,10 @@
   justify-content: center;
 }
 
-.childDiv {
-  display: flex;
-  align-items: flex-end;
-  width: fit-content;
-  block-size: fit-content;
-  border: 1px solid black;
-}
 .TotalPrice {
   font-size: 24px;
   font-weight: bold;
   color: #ff0000;
-  text-align: right;
   text-decoration: underline;
   padding: 8px;
   background-color: #f5f5f5;
@@ -64,4 +57,7 @@
 .productTitle {
   text-align: center;
   padding: 2px;
+}
+.productDiv {
+  display: flex;
 }

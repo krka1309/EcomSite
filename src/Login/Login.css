@@ -1,10 +1,24 @@
 .LoginComp {
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 70vh;
 }
+.input-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: rgb(144, 131, 131);
+}
+
 .forgotPassword {
   margin: 12px;
   font-size: 13px;
@@ -12,7 +26,11 @@
   cursor: pointer;
   color: red;
 }
-input {
+.signuptag {
+  font-size: 14px;
+}
+
+.inputItem {
   width: 200px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -24,16 +42,16 @@ input {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
 }
-input:focus {
+.inputItem:focus {
   border-color: #6c63ff;
 }
-label {
+.labelText {
   display: inline-block;
   padding: 12px;
-  margin-right: 10px;
+  margin-right: 154px;
   color: #333;
   font-size: 14px;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-align: right;
   vertical-align: middle;
   cursor: pointer;
@@ -42,14 +60,16 @@ label {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 9px 91px;
   border: none;
-  border-radius: 4px;
-  background-color: #6c63ff;
+  border-radius: 6px;
+  background-color: rgb(241, 62, 92);
   color: #fff;
   font-size: 14px;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); /* Add the desired shadow values */
+  margin-top: 12px;
 }

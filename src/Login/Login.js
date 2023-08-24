@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { EyeSlash } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -25,18 +26,26 @@ const Login = () => {
   console.log(error);
   return (
     <form className="LoginComp">
-      <label>Username</label>
-      <input
-        type="text"
-        placeholder="Username"
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <label>Password</label>
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
+      <span className="signuptag">LOG IN</span>
+      <label className="labelText">Username</label>
+      <div className="input-container">
+        <input
+          className="inputItem"
+          type="text"
+          placeholder="Username"
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <label className="labelText">Password</label>
+      <div className="input-container">
+        <input
+          className="inputItem"
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <EyeSlash className="eye-icon" size={22} />
+      </div>
       <button type="submit" onClick={handleLogin}>
         Login
       </button>
